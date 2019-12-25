@@ -26,6 +26,8 @@ namespace CleanArch.Application.Services
                 courseViewModel.Name,
                 courseViewModel.Description,
                 courseViewModel.ImageUrl);
+            
+            _bus.SendCommand(createCourseCommand);
         }
 
         public CourseViewModel GetCourses()
